@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kullanıcı Yönetimi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #004080;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #0059b3;
+            overflow: hidden;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0;
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 1rem 2rem;
+            color: white;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            background-color: #0073e6;
+        }
+
+        main {
+            padding: 2rem;
+        }
+
+        main section {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #004080;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        button:hover {
+            background-color: #003366;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+
+        th, td {
+            padding: 0.5rem;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .actions button {
+            margin-right: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Kullanıcı Yönetimi</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="yonetici_panel.html">Ana Sayfa</a></li>
+            <li><a href="kullanici_yonetimi.html">Kullanıcı Yönetimi</a></li>
+            <li><a href="yonetici_fatura_odeme.html">Fatura Ödeme</a></li>
+            <li><a href="yonetici_kredi_basvurusu.html">Kredi Başvurusu İşlemleri</a></li>
+            <li><a href="raporlar.html">Raporlar</a></li>
+            <li><a href="onay_bekleyen.html">Onay Bekleyen İşlemler</a></li>
+            <li><a href="banka_bilgileri.html">Banka Bilgileri</a></li>
+            <li><a href="index.html">Çıkış</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h2>Yeni Kullanıcı Ekle</h2>
+            <form id="add-user-form">
+                <div class="form-group">
+                    <label for="add-name">Ad Soyad</label>
+                    <input type="text" id="add-name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="add-email">Email</label>
+                    <input type="email" id="add-email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="add-username">Kullanıcı Adı</label>
+                    <input type="text" id="add-username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="add-address">Adres</label>
+                    <input type="text" id="add-address" name="address" required>
+                </div>
+                <div class="form-group">
+                    <label for="add-dob">Doğum Tarihi</label>
+                    <input type="date" id="add-dob" name="dob" required>
+                </div>
+                <div class="form-group">
+                    <label for="add-gender">Cinsiyet</label>
+                    <select id="add-gender" name="gender" required>
+                        <option value="">Seçiniz</option>
+                        <option value="male">Erkek</option>
+                        <option value="female">Kadın</option>
+                        <option value="other">Diğer</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="add-password">Şifre</label>
+                    <input type="password" id="add-password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="add-confirm-password">Şifreyi Onayla</label>
+                    <input type="password" id="add-confirm-password" name="confirm-password" required>
+                </div>
+                <button type="submit">Ekle</button>
+            </form>
+        </section>
+        <section>
+            <h2>Mevcut Kullanıcılar</h2>
+            <table id="user-table">
+                <thead>
+                    <tr>
+                        <th>Ad Soyad</th>
+                        <th>Email</th>
+                        <th>Kullanıcı Adı</th>
+                        <th>Adres</th>
+                        <th>Doğum Tarihi</th>
+                        <th>Cinsiyet</th>
+                        <th>İşlemler</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Kullanıcılar buraya eklenecek -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <script>
+        document.getElementById("add-user-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Sayfanın yeniden yüklenmesini engelle
+
+            // Formdaki bilgileri al
+            var name = document.getElementById("add-name").value;
+            var email = document.getElementById("add-email").value;
+            var username = document.getElementById("add-username").value;
+            var address = document.getElementById("add-address").value;
+            var dob = document.getElementById("add-dob").value;
+            var gender = document.getElementById("add-gender").value;
+            var password = document.getElementById("add-password").value;
+            var confirmPassword = document.getElementById("add-confirm-password").value;
+
+            // Şifrelerin aynı olup olmadığını kontrol et
+            if (password !== confirmPassword) {
+                alert("Şifreler aynı değil. Lütfen kontrol edin.");
+                return;
+            }
+
+            // Kullanıcı adının veya emailin daha önce kullanılıp kullanılmadığını kontrol et
+            var users = JSON.parse(localStorage.getItem("users")) || [];
+            var usernameExists = users.some(function(user) {
+                return user.username === username;
+            });
+            var emailExists = users.some(function(user) {
+                return user.email === email;
+            });
+
+            if (usernameExists) {
+                alert("Bu kullanıcı adı zaten kullanılıyor. Lütfen başka bir kullanıcı adı seçin.");
+                return;
+            }
+
+            if (emailExists) {
+                alert("Bu email zaten kullanılıyor. Lütfen başka bir email adresi seçin.");
+                return;
+            }
+
+            // Yeni bir kullanıcı nesnesi oluştur
+            var newUser = {
+                name: name,
+                email: email,
+                username: username,
+                address: address,
+                dob: dob,
+                gender: gender,
+                password: password
+            };
+
+            // Kullanıcı bilgilerini localStorage içine kaydet
+            users.push(newUser);
+            localStorage.setItem("users", JSON.stringify(users));
+
+            // Kullanıcı tablosunu güncelle
+            updateUserTable();
+
+            // Formu sıfırla
+            document.getElementById("add-user-form").reset();
+        });
+
+        function updateUserTable() {
+            var users = JSON.parse(localStorage.getItem("users")) || [];
+            var userTableBody = document.getElementById("user-table").getElementsByTagName("tbody")[0];
+            userTableBody.innerHTML = ""; // Tabloyu temizle
+
+            users.forEach(function(user, index) {
+                var row = userTableBody.insertRow();
+
+                var cellName = row.insertCell(0);
+                var cellEmail = row.insertCell(1);
+                var cellUsername = row.insertCell(2);
+                var cellAddress = row.insertCell(3);
+                var cellDob = row.insertCell(4);
+                var cellGender = row.insertCell(5);
+                var cellActions = row.insertCell(6);
+
+                cellName.textContent = user.name;
+                cellEmail.textContent = user.email;
+                cellUsername.textContent = user.username;
+                cellAddress.textContent = user.address;
+                cellDob.textContent = user.dob;
+                cellGender.textContent = user.gender;
+
+                var editButton
+                var editButton = document.createElement("button");
+                editButton.textContent = "Düzenle";
+                editButton.addEventListener("click", function() {
+                    // Düzenleme işlemi için gerekli kodlar buraya gelecek
+                    alert("Düzenleme işlemi henüz yapılmadı.");
+                });
+
+                var deleteButton = document.createElement("button");
+                deleteButton.textContent = "Sil";
+                deleteButton.addEventListener("click", function() {
+                    // Silme işlemi için gerekli kodlar buraya gelecek
+                    alert("Silme işlemi henüz yapılmadı.");
+                });
+
+                cellActions.appendChild(editButton);
+                cellActions.appendChild(deleteButton);
+            });
+        }
+
+        // Sayfa yüklendiğinde mevcut kullanıcıları tabloya ekle
+        window.onload = function() {
+            updateUserTable();
+        };
+    </script>
+</body>
+</html>

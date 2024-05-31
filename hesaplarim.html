@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hesaplarım</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #004080;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav {
+    background-color: #0059b3;
+    overflow: hidden;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    display: block;
+    padding: 1rem 2rem;
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #0073e6;
+}
+
+main {
+    padding: 2rem;
+}
+
+main section {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 0.75rem;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+footer {
+    background-color: #004080;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Hesaplarım</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="customer_menu.html">Menu'ye Dön</a></li>
+            <li><a href="#ayarlar">Ayarlar</a></li>
+            <li><a href="index.html">Çıkış</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="hesap_bilgileri">
+            <h2>Hesap Bilgileri</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Hesap Numarası</th>
+                        <th>Hesap Türü</th>
+                        <th>Bakiye</th>
+                        <th>Şube</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>12345678</td>
+                        <td>Vadesiz TL Hesabı</td>
+                        <td>12,345.67 TL</td>
+                        <td>İstanbul</td>
+                    </tr>
+                    <tr>
+                        <td>87654321</td>
+                        <td>Vadesiz USD Hesabı</td>
+                        <td>3,210.45 USD</td>
+                        <td>Ankara</td>
+                    </tr>
+                    <tr>
+                        <td>11223344</td>
+                        <td>Vadeli TL Hesabı</td>
+                        <td>50,000.00 TL</td>
+                        <td>İzmir</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Banka Adı. Tüm hakları saklıdır.</p>
+    </footer>
+</body>
+</html>

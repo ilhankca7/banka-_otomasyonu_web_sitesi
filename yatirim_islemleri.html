@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yatırım İşlemleri</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #004080;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav {
+    background-color: #0059b3;
+    overflow: hidden;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    display: block;
+    padding: 1rem 2rem;
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #0073e6;
+}
+
+main {
+    padding: 2rem;
+}
+
+main section {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #004080;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #003366;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 0.75rem;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+footer {
+    background-color: #004080;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Yatırım İşlemleri</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="customer_menu.html">Menu'ye Dön</a></li>
+            <li><a href="ayarlar.html">Ayarlar</a></li>
+            <li><a href="index.html">Çıkış</a></li>
+
+        </ul>
+    </nav>
+    <main>
+        <section id="yatirim_islemleri">
+            <h2>Yatırım Yap</h2>
+            <form>
+                <div class="form-group">
+                    <label for="yatirim-turu">Yatırım Türü</label>
+                    <select id="yatirim-turu" name="yatirim-turu">
+                        <option value="hisse_senedi">Hisse Senedi</option>
+                        <option value="doviz">Döviz</option>
+                        <option value="altin">Altın</option>
+                        <option value="fon">Fon</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="yatirim-miktari">Yatırım Miktarı</label>
+                    <input type="number" id="yatirim-miktari" name="yatirim-miktari" required>
+                </div>
+                <button type="submit">Yatırım Yap</button>
+            </form>
+        </section>
+        <section id="mevcut_yatirimlar">
+            <h2>Mevcut Yatırımlar</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Yatırım Türü</th>
+                        <th>Miktar</th>
+                        <th>Değer</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Hisse Senedi</td>
+                        <td>100</td>
+                        <td>50,000 TL</td>
+                    </tr>
+                    <tr>
+                        <td>Döviz</td>
+                        <td>2000 USD</td>
+                        <td>17,000 TL</td>
+                    </tr>
+                    <tr>
+                        <td>Altın</td>
+                        <td>500 Gram</td>
+                        <td>250,000 TL</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Banka Adı. Tüm hakları saklıdır.</p>
+    </footer>
+</body>
+</html>

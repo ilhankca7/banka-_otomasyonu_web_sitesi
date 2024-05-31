@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Müşteri Girişi</title>
+    <link rel="stylesheet" href="styles3.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-card">
+            <img src="ziraat-logo.png" alt="Ziraat Bankası Logo" class="logo">
+            <h2>Sayın Müşterimiz
+                Hoş Geldiniz</h2>
+            <form id="login-form">
+                <label for="username">Kullanıcı Adı:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Şifreniz:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit">Giriş Yap</button>
+            </form>
+            <p><a href="#">Şifremi Unuttum</a></p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Giriş kontrolü (basit bir örnek)
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            if(username === 'testuser' && password === 'testpass') {
+                window.location.href = 'customer_menu.html';
+            } else {
+                alert('Geçersiz kullanıcı adı veya şifre!');
+            }
+            
+        });
+    </script>
+</body>
+</html>

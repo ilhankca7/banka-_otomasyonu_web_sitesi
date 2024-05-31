@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yönetici Paneli - Para Transferi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f9fc;
+        }
+
+        header {
+            background-color: #004080;
+            color: #fff;
+            padding: 10px 0;
+        }
+
+        header h1 {
+            text-align: center;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+        }
+
+        header nav ul li {
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        header nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #0080ff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #fff;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        form input {
+            width: calc(100% - 16px);
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #004080;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #005bb5;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Ziraat Bankası Yönetici Paneli</h1>
+            <nav>
+                <ul>
+                    <li><a href="admin_dashboard.html">Yönetici Paneli</a></li>
+                    <li><a href="money_transfer.html">Para Transferi</a></li>
+                    <li><a href="index.html">Çıkış</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <h2>Para Transferi</h2>
+        <form id="transfer-form">
+            <label for="from-account">Gönderen Hesap:</label>
+            <input type="text" id="from-account" name="from-account" required>
+            
+            <label for="to-account">Alıcı Hesap:</label>
+            <input type="text" id="to-account" name="to-account" required>
+            
+            <label for="amount">Miktar:</label>
+            <input type="number" id="amount" name="amount" required>
+            
+            <button type="submit">Transfer Et</button>
+        </form>
+        
+        <h3>Transfer Geçmişi</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Tarih</th>
+                    <th>Gönderen Hesap</th>
+                    <th>Alıcı Hesap</th>
+                    <th>Miktar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Transfer geçmişi burada yer alacak -->
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

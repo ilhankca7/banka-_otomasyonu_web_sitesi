@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fatura Ödeme</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #004080;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav {
+    background-color: #0059b3;
+    overflow: hidden;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    display: block;
+    padding: 1rem 2rem;
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #0073e6;
+}
+
+main {
+    padding: 2rem;
+}
+
+section {
+    background-color: white;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+section h2 {
+    color: #004080;
+}
+
+section form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+section form div {
+    margin-bottom: 1rem;
+}
+
+section form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+section form input[type="text"] {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+section form button {
+    background-color: #004080;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+section form button:hover {
+    background-color: #003366;
+}
+
+footer {
+    background-color: #004080;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Gelecek Bankası</h1>
+        <h3>Müşteri Fatura Ödeme</h3>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="yonetici_panel.html">Ana Sayfa</a></li>
+            <li><a href="kullanici_yonetimi.html">Kullanıcı Yönetimi</a></li>
+            <li><a href="yonetici_fatura_odeme.html">Fatura Ödeme</a></li>
+            <li><a href="yonetici_kredi_basvurusu.html">Kredi Başvurusu İşlemleri</a></li>
+            <li><a href="raporlar.html">Raporlar</a></li>
+            <li><a href="onay_bekleyen.html">Onay Bekleyen İşlemler</a></li>
+            <li><a href="banka_bilgileri.html">Banka Bilgileri</a></li>
+            <li><a href="index.html">Çıkış</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h2>Müşteri Fatura Ödeme</h2>
+            <form action="#" method="post" id="fatura-odeme-form">
+                <div>
+                    <label for="musteri-no">Müşteri'nin Adı Soyadı:</label>
+                    <input type="text" id="fatura-no" name="fatura-no" required>
+                </div>
+                <div>
+                    <label for="fatura-no">Müşteri'nin Fatura Numarası:</label>
+                    <input type="text" id="fatura-no" name="fatura-no" required>
+                </div>
+                <div>
+                    <label for="miktar">Ödenecek Miktar:</label>
+                    <input type="text" id="miktar" name="miktar" required>
+                </div>
+                <div>
+                    <button type="submit">Ödemeyi Tamamla</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Banka Adı. Tüm hakları saklıdır.</p>
+    </footer>
+</body>
+</html>

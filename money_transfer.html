@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Account Page</title>
+    <style>
+             body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #004080;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav {
+    background-color: #0059b3;
+    overflow: hidden;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    display: block;
+    padding: 1rem 2rem;
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #0073e6;
+}
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            background-color: #e5e5e5;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .header img {
+            width: 30px;
+            height: 30px;
+        }
+        .header .time {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .header .battery {
+            display: flex;
+            align-items: center;
+        }
+        .header .battery span {
+            font-size: 14px;
+            margin-left: 5px;
+        }
+        .account-info {
+            background-color: #d8d8d8;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .account-info img {
+            width: 50px;
+            height: 70px;
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .account-info h3 {
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 5px;
+        }
+        .account-info p {
+            text-align: center;
+            margin: 5px 0;
+        }
+        .balance {
+            font-size: 24px;
+            text-align: center;
+            margin: 10px 0;
+        }
+        .buttons {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+        .buttons button {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .search {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .search input {
+            width: 90%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .menu {
+            text-align: center;
+        }
+        .menu img {
+            width: 30px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Para Transferi</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="customer_menu.html">Menu'ye Dön</a></li>
+            <li><a href="#ayarlar">Ayarlar</a></li>
+            <li><a href="index.html">Çıkış</a></li>
+        </ul>
+    </nav>
+
+<div class="container">
+    <div class="header">
+        <div class="time">14:45</div>
+        <div class="battery">
+            
+            <span>38</span>
+        </div>
+    </div>
+
+    <div class="account-info">
+        
+        <h3>YEŞİLYURT/MALATYA ŞUBESİ</h3>
+        <p>616-100432118-5001</p>
+        <div class="balance">2,90 TL</div>
+        <p>IBAN: TRXX XXXX XXXX XXXX XXXX XX01</p>
+    </div>
+
+    <div class="buttons">
+        <button>Para Transferi</button>
+        <button>Hesap Hareketleri</button>
+    </div>
+
+    <div class="search">
+        <input type="text" placeholder="Aradığınız işlemi yazın">
+    </div>
+
+    <div class="menu">
+       
+    </div>
+</div>
+
+</body>
+</html>

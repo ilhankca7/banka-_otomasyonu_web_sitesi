@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kredi Başvuruları</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #004080;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav {
+    background-color: #0059b3;
+    overflow: hidden;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    display: block;
+    padding: 1rem 2rem;
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #0073e6;
+}
+
+main {
+    padding: 2rem;
+}
+
+section {
+    background-color: white;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+section h2 {
+    color: #004080;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+table th {
+    background-color: #004080;
+    color: white;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+footer {
+    background-color: #004080;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Gelecek Bankası</h1>
+        <h3>Kredi Başvurusu</h3>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="yonetici_panel.html">Ana Sayfa</a></li>
+            <li><a href="kullanici_yonetimi.html">Kullanıcı Yönetimi</a></li>
+            <li><a href="fatura_odeme.html">Fatura Ödeme</a></li>
+            <li><a href="yonetici_kredi_basvurusu.html">Kredi Başvurusu İşlemleri</a></li>
+            <li><a href="raporlar.html">Raporlar</a></li>
+            <li><a href="onay_bekleyen.html">Onay Bekleyen İşlemler</a></li>
+            <li><a href="banka_bilgileri.html">Banka Bilgileri</a></li>
+            <li><a href="index.html">Çıkış</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h2>Kredi Başvuruları</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ad Soyad</th>
+                        <th>TCKN</th>
+                        <th>Tutar</th>
+                        <th>Durum</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ali Can</td>
+                        <td>12345678900</td>
+                        <td>10.000 TL</td>
+                        <td>İnceleniyor</td>
+                    </tr>
+                    <!-- Diğer kredi başvuruları buraya eklenebilir -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Banka Adı. Tüm hakları saklıdır.</p>
+    </footer>
+</body>
+</html>

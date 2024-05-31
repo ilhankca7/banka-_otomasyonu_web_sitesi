@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kullanıcı Yönetimi</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+    }
+    
+    header {
+        background-color: #004080;
+        color: white;
+        padding: 1rem;
+        text-align: center;
+    }
+    
+    nav {
+        background-color: #0059b3;
+        overflow: hidden;
+    }
+    
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+    
+    nav ul li {
+        margin: 0;
+    }
+    
+    nav ul li a {
+        display: block;
+        padding: 1rem 2rem;
+        color: white;
+        text-decoration: none;
+    }
+    
+    nav ul li a:hover {
+        background-color: #0073e6;
+    }
+    main {
+    padding: 2rem;
+}
+
+section {
+    background-color: white;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+section h2 {
+    color: #004080;
+}
+
+section p {
+    margin-bottom: 1rem;
+}
+
+section a {
+    display: block;
+    width: 200px;
+    padding: 10px;
+    margin-top: 10px;
+    text-align: center;
+    background-color: #004080;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+section a:hover {
+    background-color: #003366;
+}
+
+  
+    
+    footer {
+        background-color: #004080;
+        color: white;
+        text-align: center;
+        padding: 1rem;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+    }
+</style>
+</head>
+<body>
+    <header>
+        <h1>Gelecek Bankası </h1>
+        <h3>Yönetici Paneli</h3>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="kullanici_yonetimi.html">Kullanıcı Yönetimi</a></li>
+            <li><a href="yonetici_fatura_odeme.html">Fatura Ödeme</a></li>
+            <li><a href="yonetici_kredi_basvurusu.html">Kredi Başvurusu İşlemleri</a></li>
+            <li><a href="raporlar.html">Raporlar</a></li>
+            <li><a href="onay_bekleyen.html">Onay Bekleyen İşlemler</a></li>
+            <li><a href="banka_bilgileri.html">Banka Bilgileri</a></li>
+            <li><a href="index.html">Çıkış</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>Gelecek Bankası Yönetici Paneline Hoş Geldiniz</h2>
+                <p>Bankanızı yönetmek için buraya gelmiş olmanızdan dolayı memnuniyet duyuyoruz.</p>
+                <a href="#" class="cta-button">Daha Fazla Bilgi</a>
+            </div>
+        </section>
+
+        <section class="services">
+            <div class="container">
+                <h2>Sunulan Hizmetler</h2>
+                <div class="service-cards">
+                    <div class="card">
+                        <h3>Kullanıcı Yönetimi</h3>
+                        <p>Banka kullanıcılarını yönetme ve hesaplarına erişme.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Fatura Ödeme</h3>
+                        <p>Müşterilerin fatura ödemelerini yönetme.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Kredi Başvurusu İşlemleri</h3>
+                        <p>Kredi başvurularını inceleme ve işleme alma.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Raporlar</h3>
+                        <p>Banka işlemleri ve verilerine ilişkin raporları görüntüleme.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Onay Bekleyen İşlemler</h3>
+                        <p>Onay bekleyen işlemleri görüntüleme ve işleme alma.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Banka Ayarları</h3>
+                        <p>Banka genel ayarlarını düzenleme.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact">
+            <div class="container">
+                <h2>Bize Ulaşın</h2>
+                <p>Herhangi bir sorunuz veya geri bildiriminiz mi var? Bize ulaşın!</p>
+                <a href="#" class="cta-button">İletişim</a>
+            </div>
+        </section>
+    </main>
+
+   
+    <footer>
+        <p>&copy; 2024 Banka Adı. Tüm hakları saklıdır.</p>
+    </footer>
+   
+</body>
+</html>
